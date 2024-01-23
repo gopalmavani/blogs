@@ -65,9 +65,7 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-
-
-Steps for the setup project 
+## Steps for the setup project 
 
 Step-1: git clone https://github.com/gopalmavani/blogs.git // Open your terminal or command prompt and navigate to the directory where you want to clone the Laravel project
 
