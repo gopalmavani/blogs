@@ -71,10 +71,16 @@ Steps for the setup project
 
 Step-1: git clone https://github.com/gopalmavani/blogs.git // Open your terminal or command prompt and navigate to the directory where you want to clone the Laravel project
 
-Step-2: composer install  // Install the required PHP dependencies using Composer 
+Step-2: composer install  // Install the required PHP dependencies using Composer
+
 Step-3: Create database
+
 Step-4: Create .env file and put credential for connect database
+
 Step-5: php artisan key:generate // Generate the application key
+
 Step-6: php artisan migrate // Run database migrations to create tables in the database
+
 Step-7: php artisan serve // You can use the built-in Laravel development server to run 
+
 Step-8: npm install & npm run dev // latest version of laravel so need to do this 
