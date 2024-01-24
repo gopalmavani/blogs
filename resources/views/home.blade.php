@@ -17,13 +17,16 @@
                     @foreach($posts as $post)
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <div>
-                                <h4>{{ ucfirst($post->title) }}</h4>
-                                <p>{{ $post->content }}</p>
+                                <a href="{{ route('posts.show', ['post' => $post->id]) }}">
+                                    <h4>{{ ucfirst($post->title) }}</h4>
+                                </a>
+                                <p>{{ Str::limit($post->content, 55, $end='...');  }}</p>
                                 <small>Posted on {{ $post->created_at->format('F j, Y') }}</small>
                             </div>
                             <div class="ml-auto">
+                                <a href="{{ route('posts.show', ['post' => $post->id]) }}" class="btn btn-secondary">Show</a>
                                 @if($post->user_id == Auth::user()->id)
-                                    <a href="{{ route('posts.show', ['post' => $post->id]) }}" class="btn btn-secondary">Show</a>
+                                    
                                     <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-primary">Edit</a>
                                     <form id="delete-form-{{ $post->id }}" action="{{ route('posts.destroy', $post->id) }}" method="POST" style="display: none;">
                                         @csrf
